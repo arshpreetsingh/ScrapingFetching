@@ -1,0 +1,6 @@
+Parallel processing is selling like hot cakes in many of the fileds as hardware
+companies are going to increase processor cores and usage of more and more data
+or big data is introduced in industry we need lot of parallel tasks working
+together and communication with each other on the fly, asyncio is just one
+of the newest example in the python world, where you have to just write
+simple functions @async decorator and you can 

@@ -1,0 +1,26 @@
+https://www.rottentomatoes.com/top/bestofrt/top_100_kids__family_movies
+from bs4 import BeautifulSoup
+import requests
+import re
+import json
+import time
+import numpy as np
+all_array = []
+import re
+url = 'http://www.imdb.com/search/title?genres=family&page='+str(pages)
+print url
+html = requests.get(url)
+soup = BeautifulSoup(html.content, 'html.parser')
+other_data = soup.find_all("div",{"class":"lister-item-content"})
+'''
+print html
+for i in other_data:
+        m = i.findChildren()[0].renderContents()
+        main_string = m.split()[5]
+        m=re.finditer('(?<=/)\w+',main_string, flags=0)
+        for movie_id_data in m:
+            movie_id =movie_id_data.group()
+            all_array.append(movie_id)
+            print all_array
+            time.sleep(10)
+'''
